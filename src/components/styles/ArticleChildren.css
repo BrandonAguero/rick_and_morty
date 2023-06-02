@@ -1,0 +1,8 @@
+.main .main__article:last-of-type {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
+    justify-items: center;
+    margin: 0 auto;
+    gap: 2rem;
+}
