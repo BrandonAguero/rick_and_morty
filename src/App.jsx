@@ -6,8 +6,14 @@ import Header from './components/Header';
 import MainChildren from './components/MainChildren';
 import InputSearch from './components/InputSearch';
 import InfoLocation from './components/InfoLocation';
+import { useCookies } from 'react-cookie';
+
 
 function App() {
+
+  const [cookies, setCookie] = useCookies(['cookieName']);
+  
+  setCookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true });
 
 
   const randomId = getRandomNumber(126);
