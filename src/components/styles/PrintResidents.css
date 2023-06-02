@@ -1,0 +1,17 @@
+.main .main__article:last-of-type .main__article--section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #042023d2;
+    border-radius: 1em;
+    width: 100%;
+}
+.main .main__article:last-of-type .main__article--section header {
+    width: 100%;
+}
+.main .main__article:last-of-type .main__article--section header figure {
+    width: 100%;
+}
+.main .main__article:last-of-type .main__article--section header figure img {
+    width: 100%;
+}

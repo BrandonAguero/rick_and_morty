@@ -14,7 +14,7 @@ const PrintResidents = ({ resident }) => {
     
 
     return (
-        <section>
+        <section className='main__article--section'>
             <header>
                 <figure>
                     <img src={character?.image}/>
