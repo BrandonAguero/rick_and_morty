@@ -1,0 +1,56 @@
+.main__form {
+    display: flex;
+    margin-top: 4rem;
+    gap: 0.5rem;
+}
+.main__form :nth-child(n) {
+    font-size: 1.5rem;
+    padding: 1em;
+    font-family: 'Merriweather', serif;
+    border: none;
+    border-radius: 0.3em;
+}
+.main__form :first-child {
+    background-color: #ecf1f1;
+    width: 20rem;
+}
+:lang(es) .main__form :first-child {
+    width: 30rem;
+    min-width: 27.5rem;
+}
+
+.main__form :first-child::placeholder {
+    font-size: 1.5rem;
+    font-family: 'Merriweather', serif;
+    color: #05292e;
+}
+.main__form :first-child:focus {
+    outline: 0.15em solid #47d7ac;
+}
+.main__form :last-child {
+    color: #ecf1f1;
+    background-color: #47d7ac;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    :lang(es) .main__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
+@media screen and (min-width: 1280px) {
+    .main__form {
+        gap: 0;
+    }
+    .main__form :first-child {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .main__form :last-child {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+}

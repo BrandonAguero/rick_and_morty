@@ -1,0 +1,8 @@
+.main {
+    width: 100vw;
+    min-width: 32rem;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

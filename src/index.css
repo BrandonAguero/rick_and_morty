@@ -1,0 +1,11 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Courgette', cursive;
+    font-family: 'Merriweather', serif;
+    background-color: #05292e;
+}
+html {
+    font-size: 62.5%;
+}
