@@ -36,3 +36,38 @@
     color:  #9ca3a8;
     font-size: 1rem;
 }
+:lang(es) .main__article .main__article--section ul li :first-of-type font font {
+    color: #ecf1f1;
+    font-size: 1.3rem;
+}
+:lang(es) .main__article .main__article--section ul li :last-of-type font font {
+    color: #9ca3a8;
+    font-size: 1rem;
+}
+
+@media screen and (min-width: 600px) {
+    .main__article {
+        max-width: 50rem;
+        gap: 3rem;
+    }
+    .main__article .main__article--header h1 {
+        font-size: 4rem;
+    }
+    .main__article .main__article--section ul li {
+        gap: 2rem;
+    }
+    .main__article .main__article--section ul li :first-of-type {
+        font-size: 1.8rem;
+    }
+    .main__article .main__article--section ul li :last-of-type {
+        font-size: 1.5rem;
+    }
+    :lang(es) .main__article .main__article--section ul li :first-of-type font font {
+        color: #ecf1f1;
+        font-size: 1.8rem;
+    }
+    :lang(es) .main__article .main__article--section ul li :last-of-type font font {
+        color: #9ca3a8;
+        font-size: 1.5rem;
+    }
+}

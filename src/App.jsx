@@ -12,7 +12,7 @@ import { useCookies } from 'react-cookie';
 function App() {
 
   const [cookies, setCookie] = useCookies(['cookieName']);
-  
+
   setCookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true });
 
 
