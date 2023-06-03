@@ -8,6 +8,39 @@
 }
 .main .main__article:last-of-type .main__article--section header {
     width: 100%;
+    position: relative;
+}
+.main .main__article:last-of-type .main__article--section header div {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    background-color: #042023;
+    width: 40%;
+    height: 2em;
+    gap: 1rem;
+    padding-left: 1em;
+    top: 2rem;
+    border-top-right-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+.main .main__article:last-of-type .main__article--section header div span:first-of-type {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    border-radius: 50%;
+}
+.main .main__article:last-of-type .main__article--section header div span:last-of-type {
+    color: #ecf1f1;
+    font-size: 1rem;
+}
+.main .main__article:last-of-type .main__article--section header div .Dead {
+    background-color: #ff0000;
+}
+.main .main__article:last-of-type .main__article--section header div .unknown {
+    background-color: #abb2b9;
+}
+.main .main__article:last-of-type .main__article--section header div .Alive {
+    background-color: #28b463 ;
 }
 .main .main__article:last-of-type .main__article--section header figure {
     width: 100%;

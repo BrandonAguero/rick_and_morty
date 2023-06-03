@@ -16,6 +16,10 @@ const PrintResidents = ({ resident }) => {
     return (
         <section className='main__article--section'>
             <header>
+                <div>
+                    <span className={`${character?.status}`} ></span>
+                    <span>{character?.status}</span>
+                </div>
                 <figure>
                     <img src={character?.image}/>
                 </figure>
