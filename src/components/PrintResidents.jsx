@@ -22,7 +22,7 @@ const PrintResidents = ({ resident }) => {
             </header>
             <section>
                 <h3>{character?.name}</h3>
-                <hr />
+                <div></div>
                 <ul>
                     <li>
                         <span>Specie</span>
