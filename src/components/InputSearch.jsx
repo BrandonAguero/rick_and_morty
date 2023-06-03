@@ -2,41 +2,63 @@ import { useEffect, useRef, useState } from 'react'
 import './styles/InputSearch.css';
 import useFetch from '../hooks/useFetch';
 
-const InputSearch = () => {
-
+const InputSearch = ({setFindLocation}) => {
     const url = 'https://rickandmortyapi.com/api/location';
-
     const [allLocations, getAllLocations] = useFetch(url)
 
     useEffect(() => {
         getAllLocations()
     }, [])
-    
-    console.log(allLocations?.results)
 
     const valueInput = useRef();
     const [inputValue, setInputValue] = useState([])
+    const [resultInput, setResultInput] = useState('')
     const nameLocationAll =  allLocations?.results.map(location => location.name)
 
     const handleChangeInput = () => {
         const nameLocation = valueInput.current.value.trim()
+        console.log(nameLocation)
         const nameEqualLocation = nameLocationAll.filter((name) => name.includes(nameLocation))
         if (nameEqualLocation.length !== 20) setInputValue(nameEqualLocation)
         if (nameEqualLocation.length === 20) setInputValue([])
+        setResultInput(nameLocation)
     }
 
-    console.log(inputValue)    
+    const handleClickLi = (e) => {
+        const choiceUser = e.target.getAttribute('value')
+        setResultInput(choiceUser)
+        setInputValue([])
+    }
+
+    const handleClickForm = (e) => {
+        e.preventDefault()
+        const findLocation = allLocations?.results.find((location) => {
+            if (location.name === resultInput) {
+                return location.id
+            }
+        })
+        setFindLocation(findLocation.id)
+        setResultInput('')
+    }
 
     return (
-        <form className="main__form" onChange={handleChangeInput}>
+        <form className="main__form" onSubmit={handleClickForm}>
             <div>
-                <input placeholder="Enter a name location" type='text' ref={valueInput}/>
+                <input 
+                    value={resultInput}
+                    placeholder="Enter a location name" 
+                    type='text' 
+                    ref={valueInput}
+                    onChange={handleChangeInput}
+                />
                 <button>Search</button>
             </div>
             <div className={`${inputValue.length ? 'div' : 'notDiv'}`}>
                 <ul>
                     {
-                        inputValue?.map((name) => (<li key={name}>{name}</li> ))
+                        inputValue?.map((name) => (
+                            <li value={name} key={name} onClick={handleClickLi}>{name}</li>
+                        ))
                     }
                 </ul>
             </div>
@@ -44,4 +66,4 @@ const InputSearch = () => {
     )
 }
 
-export default InputSearch
+export default InputSearch;

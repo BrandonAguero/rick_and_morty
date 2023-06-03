@@ -10,7 +10,7 @@
 body {
     font-family: 'Courgette', cursive;
     font-family: 'Merriweather', serif;
-    background-color: #05292e;
+    background-color: var(--first-color);
 }
 html {
     font-size: 62.5%;

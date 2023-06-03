@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css'
 import useFetch from './hooks/useFetch';
 import getRandomNumber from './utils/getRandomNumber';
@@ -12,22 +12,24 @@ import PrintResidents from './components/PrintResidents';
 function App() {
 
   const [cookies, setCookie] = useCookies(['cookieName']);
+  const [findLocation, setFindLocation] = useState()
 
   setCookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true });
 
-  const randomId = getRandomNumber(126);
+  const randomId = findLocation || getRandomNumber(126);
   const url = `https://rickandmortyapi.com/api/location/${randomId}`;
   const [location, getApiLocation] = useFetch(url)
 
   useEffect(() => {
     getApiLocation();
-  }, [])
+  }, [findLocation])
 
+  console.log(location)
   return (
     <>
       <Header />
       <main className='main'>
-        <InputSearch />
+        <InputSearch setFindLocation={setFindLocation} />
         <InfoLocation location={location} />
         <article className={`${location?.residents.length >= 1 && location?.residents.length <= 3 ? 'main__character--one' : 'main__article'}`}>
           {
