@@ -1,3 +1,9 @@
+:root {
+    --first-color: #05292e;
+    --second-color: #47d7ac;
+    --color-titles: #ecf1f1;
+    --color-paragraph: #9ca3a8;
+}
 * {
     box-sizing: border-box;
 }

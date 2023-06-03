@@ -13,7 +13,7 @@
 }
 .main .main__article:first-of-type .main__article--header h1 {
     font-size: 3rem;
-    color: #47d7ac;
+    color: var(--second-color);
     font-family: 'Courgette', cursive;
     text-align: center;
 }
@@ -28,21 +28,21 @@
     gap: 1rem;
 }
 .main .main__article:first-of-type .main__article--section ul li :first-of-type {
-    color: #ecf1f1;
+    color: var(--color-titles);
     font-weight: bold;
     font-size: 1.3rem;
 }
 .main .main__article:first-of-type .main__article--section ul li :last-of-type {
-    color:  #9ca3a8;
+    color:  var(--color-paragraph);
     font-size: 1rem;
     text-align: center;
 }
 :lang(es) .main .main__article:first-of-type .main__article--section ul li :first-of-type font font {
-    color: #ecf1f1;
+    color: var(--color-titles);
     font-size: 1.3rem;
 }
 :lang(es) .main .main__article:first-of-type .main__article--section ul li :last-of-type font font {
-    color: #9ca3a8;
+    color: var(--color-paragraph);
     font-size: 1rem;
 }
 
@@ -64,11 +64,11 @@
         font-size: 1.5rem;
     }
     :lang(es) .main .main__article:first-of-type .main__article--section ul li :first-of-type font font {
-        color: #ecf1f1;
+        color: var(--color-titles);
         font-size: 1.8rem;
     }
     :lang(es) .main .main__article:first-of-type .main__article--section ul li :last-of-type font font {
-        color: #9ca3a8;
+        color: var(--color-paragraph);
         font-size: 1.5rem;
     }
 }

@@ -28,10 +28,10 @@
     width: 85%;
     font-size: 1.3rem;
     cursor: pointer;
-    color: #9ca3a8;
+    color: var(--color-paragraph);
 }
 .main__form ul li:hover {
-    color: #47d7ac;
+    color: var(--second-color);
 }
 .main__form div:first-of-type :nth-child(n) {
     font-size: 1.5rem;
@@ -54,16 +54,16 @@
     color: #05292e;
 }
 .main__form div:first-of-type :first-child:focus {
-    outline: 0.15em solid #47d7ac;
+    outline: 0.15em solid var(--second-color);
 }
 .main__form div:first-of-type :nth-child(2) {
-    color: #ecf1f1;
-    background-color: #47d7ac;
+    color: var(--color-titles);
+    background-color: var(--second-color);
     cursor: pointer;
 }
 :lang(es) .main__form div :nth-child(2) font font {
-    color: #ecf1f1;
-    background-color: #47d7ac;
+    color: var(--color-titles);
+    background-color: var(--second-color);
     cursor: pointer;
 }
 
