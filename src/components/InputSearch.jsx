@@ -37,7 +37,6 @@ const InputSearch = ({setFindLocation}) => {
                 return location.id
             }
         })
-        console.log(findLocation)
         if (findLocation === undefined) setFindLocation(getRandomNumber(126))
         if (findLocation) setFindLocation(findLocation.id)
         setResultInput('')

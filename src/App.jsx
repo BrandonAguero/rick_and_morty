@@ -8,7 +8,6 @@ import InfoLocation from './components/InfoLocation';
 import { useCookies } from 'react-cookie';
 import PrintResidents from './components/PrintResidents';
 
-
 function App() {
 
   const [cookies, setCookie] = useCookies(['cookieName']);
@@ -16,8 +15,8 @@ function App() {
 
   setCookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true });
 
-
-  const url = `https://rickandmortyapi.com/api/location/${findLocation}`;
+  const randomId = findLocation || getRandomNumber(126);
+  const url = `https://rickandmortyapi.com/api/location/${randomId}`;
   const [location, getApiLocation] = useFetch(url)
 
   useEffect(() => {
