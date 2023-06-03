@@ -3,12 +3,10 @@ import './App.css'
 import useFetch from './hooks/useFetch';
 import getRandomNumber from './utils/getRandomNumber';
 import Header from './components/Header';
-import MainChildren from './components/MainChildren';
 import InputSearch from './components/InputSearch';
 import InfoLocation from './components/InfoLocation';
 import { useCookies } from 'react-cookie';
 import PrintResidents from './components/PrintResidents';
-import ArticleChildren from './components/ArticleChildren';
 
 
 function App() {
@@ -25,22 +23,20 @@ function App() {
     getApiLocation();
   }, [])
 
-  const characterResidents = location?.residents;
-
   return (
     <>
       <Header />
-      <MainChildren>
+      <main className='main'>
         <InputSearch />
         <InfoLocation location={location} />
-        <ArticleChildren>
+        <article className={`${location?.residents.length >= 1 && location?.residents.length <= 3 ? 'main__character--one' : 'main__article'}`}>
           {
-            characterResidents?.map((resident) => (
+            location?.residents.map((resident) => (
               <PrintResidents key={resident} resident={resident} />
             ))
           }
-        </ArticleChildren>
-      </MainChildren>
+        </article>
+      </main>
     </>
   )
 }

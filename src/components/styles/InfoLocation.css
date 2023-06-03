@@ -35,6 +35,7 @@
 .main .main__article:first-of-type .main__article--section ul li :last-of-type {
     color:  #9ca3a8;
     font-size: 1rem;
+    text-align: center;
 }
 :lang(es) .main .main__article:first-of-type .main__article--section ul li :first-of-type font font {
     color: #ecf1f1;

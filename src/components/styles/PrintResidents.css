@@ -15,3 +15,29 @@
 .main .main__article:last-of-type .main__article--section header figure img {
     width: 100%;
 }
+.main .main__character--one .main__article--section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: #042023d2;
+    border-radius: 1em;
+    width: 100%;
+}
+.main .main__character--one .main__article--section header {
+    width: 100%;
+}
+.main .main__character--one .main__article--section header figure {
+    width: 100%;
+}
+.main .main__character--one .main__article--section header figure img {
+    width: 100%;
+}
+@media screen and (min-width: 400px) {
+    .main .main__character--one .main__article--section {
+        width: 90%;
+        max-width: 30rem;
+    }
+    .main .main__article:last-of-type .main__article--section {
+        max-width: 30rem;
+    }
+}
