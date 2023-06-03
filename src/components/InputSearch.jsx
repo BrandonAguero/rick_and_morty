@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import './styles/InputSearch.css';
 import useFetch from '../hooks/useFetch';
+import getRandomNumber from '../utils/getRandomNumber';
 
 const InputSearch = ({setFindLocation}) => {
     const url = 'https://rickandmortyapi.com/api/location';
@@ -17,7 +18,6 @@ const InputSearch = ({setFindLocation}) => {
 
     const handleChangeInput = () => {
         const nameLocation = valueInput.current.value.trim()
-        console.log(nameLocation)
         const nameEqualLocation = nameLocationAll.filter((name) => name.includes(nameLocation))
         if (nameEqualLocation.length !== 20) setInputValue(nameEqualLocation)
         if (nameEqualLocation.length === 20) setInputValue([])
@@ -37,7 +37,8 @@ const InputSearch = ({setFindLocation}) => {
                 return location.id
             }
         })
-        setFindLocation(findLocation.id)
+        if (findLocation === undefined) setFindLocation(getRandomNumber(126))
+        if (findLocation) setFindLocation(findLocation.id)
         setResultInput('')
     }
 
