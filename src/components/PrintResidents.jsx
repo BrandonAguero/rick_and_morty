@@ -10,9 +10,6 @@ const PrintResidents = ({ resident }) => {
         getApiCharacter()
     }, [])
 
-    console.log(character)
-    
-
     return (
         <section className='main__article--section'>
             <header>
