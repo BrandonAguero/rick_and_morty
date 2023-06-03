@@ -16,7 +16,7 @@ const InputSearch = () => {
 
     return (
         <form className="main__form" onSubmit={handleClick}>
-            <input placeholder="Please, enter a number" type='text' ref={valueInput}/>
+            <input placeholder="Enter a name location" type='text' ref={valueInput}/>
             <button>Search</button>
         </form>
     )
