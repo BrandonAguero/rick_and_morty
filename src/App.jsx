@@ -16,8 +16,8 @@ function App() {
 
   setCookie('cookieName', 'cookieValue', { sameSite: 'none', secure: true });
 
-  const randomId = getRandomNumber(126);
-  const url = `https://rickandmortyapi.com/api/location/${randomId}`;
+
+  const url = `https://rickandmortyapi.com/api/location/${findLocation}`;
   const [location, getApiLocation] = useFetch(url)
 
   useEffect(() => {
