@@ -45,7 +45,7 @@
 }
 :lang(es) .main__form div:first-child :first-child {
     width: 20rem;
-    min-width: 27.5rem;
+    min-width: 29.5rem;
 }
 
 .main__form div:first-of-type :first-child::placeholder {
